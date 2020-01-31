@@ -756,7 +756,7 @@ class DeepzonoRelu(DeepzonoNonlinearity):
         if refine:
             element = refine_relu_with_solver_bounds(nn, self, man, element, nlb, nub, relu_groups, timeout_lp, timeout_milp)
         else:
-            #shown in 
+            #shown in https://github.com/chen19970102/ELINA/blob/master/python_interface/zonoml.py#L479
             element = relu_zono_layerwise(*self.get_arguments(man, element))
 
         if nn.last_layer=='Affine':
